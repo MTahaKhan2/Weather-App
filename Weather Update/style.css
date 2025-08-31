@@ -1,0 +1,120 @@
+ :root {
+      --bg-color: #1e1e1e;
+      --text-color: #ffffff;
+      --card-color: #2c2c2c;
+      --primary: #4f46e5;
+    }
+
+    body.light-theme {
+      --bg-color: #f3f4f6;
+      --text-color: #111827;
+      --card-color: #ffffff;
+      --primary: #2563eb;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      transition: background-color 0.3s, color 0.3s;
+      padding: 1rem;
+    }
+
+    .weather-container {
+      background-color: var(--card-color);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .weather-container h1 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .theme-toggle {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .theme-toggle button {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.4rem 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .search-box {
+      display: flex;
+      margin-bottom: 1.5rem;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 0.6rem;
+      border: none;
+      border-radius: 10px 0 0 10px;
+      outline: none;
+      background-color: #444;
+      color: #fff;
+    }
+
+    body.light-theme .search-box input {
+      background-color: #e5e7eb;
+      color: #111827;
+    }
+
+    .search-box button {
+      padding: 0.6rem 1rem;
+      border: none;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 0 10px 10px 0;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .search-box button:hover {
+      opacity: 0.9;
+    }
+
+    .weather-result {
+      text-align: center;
+    }
+
+    .weather-result h2 {
+      font-size: 1.3rem;
+      margin: 1rem 0 0.5rem;
+    }
+
+    .weather-result p {
+      margin: 0.2rem 0;
+      color: var(--text-color);
+    }
+
+    @media (max-width: 500px) {
+      .weather-container {
+        padding: 1.5rem 1rem;
+      }
+
+      .search-box input,
+      .search-box button {
+        font-size: 0.9rem;
+      }
+    }
